@@ -7,3 +7,8 @@ function AddPanel(){
     TimeInput(),
   );
 } AddPanel();
+
+function LOL(){
+  Console.log("aahaha");
+
+}
