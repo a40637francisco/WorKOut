@@ -1,5 +1,5 @@
 
 function LOL(){
-  Console.log("aahaha");
+  alert("olol");
 
 }
