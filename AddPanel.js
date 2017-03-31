@@ -1,5 +1,5 @@
 
 function LOL(){
-  alert("olol");
-
+ var t = document.getElementById("test");
+  t.innerHTML = "ahahah";
 }
