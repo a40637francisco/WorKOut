@@ -48,7 +48,7 @@ function AddButton() {
 function TimeInput() {
   var div = $("<div></div>");
   div.append($("<input></input>").attr({
-    "type":"number","placeholder":"Time in seconds",                "class":"notesInput", "min":"1"
+    "type":"number","placeholder":"Time in seconds", "class":"notesInput", "min":"1"
   }));
   return div;     
 }
