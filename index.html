@@ -1,0 +1,114 @@
+<!-- !!! SIDE NAVBAR START  !!! -->
+<div class="w3-sidebar w3-bar-block w3-card-2 w3-animate-left" style="display:none" id="mySidebar">
+  <h2>Search for a wod</h2>
+  <input id="wodSearchInput" type="text" placeholder="Exercise" /><span id="findWod" class="glyphicon glyphicon-search"></span>
+  <div class="wodSearchList">
+     
+  </div>
+</div>
+<div zclass="w3-main" id="main">
+  <div class="w3-teal">
+    <button class="w3-button w3-teal w3-xlarge" onclick="sideNavBar()">&#9776;</button>
+    <div class="w3-container">
+      <h1>Workouts</h1>
+    </div>
+  </div>
+</div>
+<!-- !!! SIDE NAVBAR END !!! -->
+
+<div class="container">
+  <div class="row">
+    <!-- !!! MAIN START !!!-->
+    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+      <div id="display-panel" class="well main">
+        <div>
+          <img id="displayImg" src="" alt="Exercise " class="display-img" />
+        </div>
+        <div>
+          <h3 id="displayExercise" class="display-exercise">  </h3>
+          <span id="displayTime" class="display-time">  </span>
+        </div>
+        <div>
+        </div>
+      </div>
+      <div id="controls-panel" class="well main">
+      <button id="play"class="btn btn-primary">Play</button>
+      <button id="pause"class="btn btn-info">Pause</button>
+      <button id="stop" class="btn btn-danger">Stop</button>
+      </div>
+      <div id="wod-panel" class="well main">
+        <div id="editable" "class": "list-group">
+        </div>
+      </div>
+    </div>
+    <!-- !!! MAIN END !!!-->
+
+    <!-- !!! ADD Exercise Panel START !!!-->
+    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 col-md-offset-1 col-sm-offset-1">
+      <div class="well" id="add-panel">
+        <div>
+          <img id="exercise-img"src="u" alt="Click to add image" onclick="imagePickerAdd()"/>
+        </div>
+        <div>
+          <div>
+            <input type="text" placeholder="Exercise" list="exerciseList" class="exerciseInput" />
+          </div>
+          <div>
+            <input type="text" placeholder="Notes" class="notesInput" />
+          </div>
+        </div>
+        <div>
+          <input type="number" placeholder="Time in seconds" min="1" class="timeInput"/>
+        </div>
+        <div>
+          <button id="add" class="add">+</button>
+        </div>
+      </div>
+      <div class="well" id="create-panel">
+        <div>
+          <img id="wod-img"src="u" alt="Click to add image to wod" onclick="imagePickerSave()"/>
+        </div>
+        <div>
+          <div>
+            <input type="text" placeholder="Wod Name" class="wodInput" />
+          </div>
+          <div>
+            <input type="number" placeholder="Sets" class="setsInput" min="1" />
+          </div>
+          <div>
+            <input type="number" placeholder="Break time" class="breakInput" min="1"/>
+          </div>
+          <div>
+            <button id="save-btn" onclick="saveWodClick()">Save wod</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- !!! ADD Exercise Panel END !!!-->
+  </div>
+</div>
+<datalist id="exerciseList">
+ </datalist>
+
+<div id="myModal" class="modal">
+  <!-- The Close Button -->
+   <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close closeModal" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Add the image link</h4>
+      </div>
+      <div class="modal-body">
+        <input placeholder="Url..." type="text" id="imageURLInput" />
+        <a id="clearUrl"> Clear</a>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary addImgUrl" data-dismiss="modal ">Add</button>
+        <button type="button" class="btn btn-default closeModal" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
